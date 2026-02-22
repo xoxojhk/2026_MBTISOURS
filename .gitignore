@@ -35,3 +35,6 @@ out/
 
 ### VS Code ###
 .vscode/
+
+# Frontend build output (Vite / React)
+src/main/resources/static/**
