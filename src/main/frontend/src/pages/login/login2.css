@@ -1,29 +1,32 @@
-
 /* Container */
 .login-container {
-  @apply w-full max-w-md flex min-h-screen items-center justify-center;
+  @apply w-full h-full flex items-center justify-center py-4 bg-gradient-to-br from-violet-100 via-purple-100 to-indigo-100;
+}
+
+.login-wrapper {
+  @apply w-full max-w-md h-full flex items-center justify-center px-4;
 }
 
 @media (min-width: 1024px) {
-  .login-container {
+  .login-wrapper {
     @apply max-w-5xl;
   }
 }
 
 /* Card */
 .login-card {
-  @apply bg-white/90 backdrop-blur-sm rounded-2xl shadow-2xl border border-violet-100 p-5 overflow-hidden;
+  @apply bg-white/90 backdrop-blur-sm rounded-2xl shadow-2xl border border-violet-100 p-4 overflow-hidden max-h-full;
 }
 
 @media (min-width: 640px) {
   .login-card {
-    @apply rounded-3xl p-10;
+    @apply rounded-3xl p-6;
   }
 }
 
 @media (min-width: 1024px) {
   .login-card {
-    @apply grid grid-cols-2 gap-8 p-0;
+    @apply grid grid-cols-2 gap-6 p-0;
   }
 }
 
@@ -34,7 +37,7 @@
 
 @media (min-width: 1024px) {
   .login-left-side {
-    @apply flex items-center justify-center bg-gradient-to-br from-violet-50 via-purple-50 to-indigo-50 p-12;
+    @apply flex items-center justify-center bg-gradient-to-br from-violet-50 via-purple-50 to-indigo-50 p-8;
   }
 }
 
@@ -44,85 +47,85 @@
 
 /* Right Side */
 .login-right-side {
-  @apply p-0;
+  @apply p-0 overflow-y-auto;
 }
 
 @media (min-width: 1024px) {
   .login-right-side {
-    @apply p-12 flex flex-col justify-center;
+    @apply p-8 flex flex-col justify-center;
   }
 }
 
 /* Header */
 .login-header {
-  @apply text-center mb-5;
+  @apply text-center mb-3;
 }
 
 @media (min-width: 640px) {
   .login-header {
-    @apply mb-8;
+    @apply mb-4;
   }
 }
 
 .login-icon {
-  @apply inline-flex items-center justify-center w-14 h-14 bg-gradient-to-br from-violet-400 via-purple-400 to-indigo-400 rounded-full mb-3 shadow-lg;
+  @apply inline-flex items-center justify-center w-10 h-10 bg-gradient-to-br from-violet-400 via-purple-400 to-indigo-400 rounded-full mb-2 shadow-lg;
 }
 
 @media (min-width: 640px) {
   .login-icon {
-    @apply w-16 h-16 mb-4;
+    @apply w-12 h-12 mb-3;
   }
 }
 
 .login-emoji {
-  @apply text-2xl;
+  @apply text-xl;
 }
 
 @media (min-width: 640px) {
   .login-emoji {
-    @apply text-3xl;
+    @apply text-2xl;
   }
 }
 
 .login-title {
-  @apply text-xl font-bold bg-gradient-to-r from-violet-600 to-purple-600 bg-clip-text text-transparent mb-1;
+  @apply text-lg font-bold bg-gradient-to-r from-violet-600 to-purple-600 bg-clip-text text-transparent mb-1;
 }
 
 @media (min-width: 640px) {
   .login-title {
-    @apply text-2xl mb-2;
+    @apply text-xl;
   }
 }
 
 .login-subtitle {
-  @apply text-sm text-gray-600;
+  @apply text-xs text-gray-600;
 }
 
 @media (min-width: 640px) {
   .login-subtitle {
-    @apply text-base;
+    @apply text-sm;
   }
 }
 
 /* Form */
 .login-form {
-  @apply space-y-3;
+  @apply space-y-2;
 }
 
 @media (min-width: 640px) {
   .login-form {
-    @apply space-y-5;
+    @apply space-y-3;
   }
 }
 
 /* Input Group */
 .login-input-label {
-  @apply block text-xs font-medium text-gray-700 mb-1.5;
+  @apply block text-xs font-medium text-gray-700 mb-1;
 }
 
 @media (min-width: 640px) {
   .login-input-label {
-    @apply text-sm mb-2;
+    @apply text-sm mb-1.5;
   }
 }
 
@@ -140,17 +143,17 @@
 
 @media (min-width: 640px) {
   .login-input-icon svg {
-    @apply size-5;
+    @apply size-4;
   }
 }
 
 .login-input {
-  @apply block w-full pl-9 pr-3 py-2.5 text-sm border-2 border-violet-200 rounded-xl focus:ring-2 focus:ring-violet-400 focus:border-violet-400 transition-all outline-none bg-white/50;
+  @apply block w-full pl-9 pr-3 py-2 text-sm border-2 border-violet-200 rounded-xl focus:ring-2 focus:ring-violet-400 focus:border-violet-400 transition-all outline-none bg-white/50;
 }
 
 @media (min-width: 640px) {
   .login-input {
-    @apply pl-10 py-3 text-base rounded-2xl;
+    @apply py-2.5 text-base rounded-2xl;
   }
 }
 
@@ -170,12 +173,12 @@
 }
 
 .login-remember-label input[type="checkbox"] {
-  @apply w-3.5 h-3.5 text-violet-600 border-violet-300 rounded focus:ring-violet-400;
+  @apply w-3 h-3 text-violet-600 border-violet-300 rounded focus:ring-violet-400;
 }
 
 @media (min-width: 640px) {
   .login-remember-label input[type="checkbox"] {
-    @apply w-4 h-4;
+    @apply w-3.5 h-3.5;
   }
 }
 
@@ -199,12 +202,12 @@
 
 /* Submit Button */
 .login-submit-btn {
-  @apply w-full py-2.5 px-4 text-sm bg-gradient-to-r from-violet-400 via-purple-400 to-indigo-400 text-white rounded-xl font-medium hover:shadow-xl hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-violet-400 transition-all disabled:opacity-50 disabled:cursor-not-allowed;
+  @apply w-full py-2 px-4 text-sm bg-gradient-to-r from-violet-400 via-purple-400 to-indigo-400 text-white rounded-xl font-medium hover:shadow-xl hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-violet-400 transition-all disabled:opacity-50 disabled:cursor-not-allowed;
 }
 
 @media (min-width: 640px) {
   .login-submit-btn {
-    @apply py-3 text-base rounded-2xl;
+    @apply py-2.5 text-base rounded-2xl;
   }
 }
 
@@ -232,37 +235,43 @@
 }
 
 .login-divider-text span {
-  @apply px-4 bg-white text-gray-500;
+  @apply px-3 bg-white text-gray-500;
+}
+
+@media (min-width: 640px) {
+  .login-divider-text span {
+    @apply px-4;
+  }
 }
 
 /* Social Buttons */
 .login-social-buttons {
-  @apply flex justify-center gap-3;
+  @apply flex justify-center gap-2;
 }
 
 @media (min-width: 640px) {
   .login-social-buttons {
-    @apply gap-4;
+    @apply gap-3;
   }
 }
 
 .login-social-btn {
-  @apply flex items-center justify-center w-12 h-12 bg-transparent border-2 border-gray-300 rounded-full hover:border-violet-400 hover:scale-110 transition-all;
+  @apply flex items-center justify-center w-10 h-10 bg-transparent border-2 border-gray-300 rounded-full hover:border-violet-400 hover:scale-110 transition-all;
 }
 
 @media (min-width: 640px) {
   .login-social-btn {
-    @apply w-14 h-14;
+    @apply w-12 h-12;
   }
 }
 
 .login-social-btn svg {
-  @apply w-5 h-5;
+  @apply w-4 h-4;
 }
 
 @media (min-width: 640px) {
   .login-social-btn svg {
-    @apply w-6 h-6;
+    @apply w-5 h-5;
   }
 }
 
@@ -272,12 +281,12 @@
 }
 
 .login-signup-link p {
-  @apply text-xs text-gray-600 mt-5;
+  @apply text-xs text-gray-600 mt-3;
 }
 
 @media (min-width: 640px) {
   .login-signup-link p {
-    @apply text-sm mt-6;
+    @apply text-sm mt-4;
   }
 }
 
