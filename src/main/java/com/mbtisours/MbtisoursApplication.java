@@ -8,6 +8,7 @@ public class MbtisoursApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(MbtisoursApplication.class, args);
+
 	}
 
 }

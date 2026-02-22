@@ -1,3 +1,4 @@
+/*
 body {
   font-family: 'Poppins', sans-serif;
   min-height: 100vh;
@@ -176,7 +177,9 @@ body {
   transform: scale(1.1);
 }
 
-/* Responsive */
+*/
+/* Responsive *//*
+
 
 @media (max-width: 768px) {
   body {
@@ -187,4 +190,4 @@ body {
     width: 300px;
     padding: 2rem;
   }
-}
+}*/

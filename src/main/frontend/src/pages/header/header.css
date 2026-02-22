@@ -1,0 +1,52 @@
+
+.header {
+  @apply w-full bg-white/80 shadow-sm backdrop-blur-sm;
+}
+
+.header-container {
+  @apply max-w-[1216px] mx-auto px-4 py-4;
+}
+
+.header-content {
+  @apply flex items-center justify-between h-11;
+}
+
+.header-brand {
+  @apply flex items-center gap-2;
+}
+
+.header-icon {
+  @apply w-9 h-9 rounded-[14px] bg-gradient-to-br from-[#A684FF] via-[#C27AFF] to-[#7C86FF] flex items-center justify-center pt-2 px-2;
+}
+
+.header-icon-svg {
+  @apply flex-shrink-0;
+}
+
+.header-text {
+  @apply flex flex-col;
+}
+
+.header-title {
+  font-family: 'Arimo', sans-serif;
+  @apply font-bold text-[20px] leading-7 bg-gradient-to-r from-[#7F22FE] via-[#9810FA] to-[#4F39F6] bg-clip-text text-transparent;
+}
+
+.header-subtitle {
+  font-family: 'Arimo', sans-serif;
+  @apply text-xs leading-4 text-[#6A7282];
+}
+
+.header-nav {
+  @apply flex items-center gap-3;
+}
+
+.header-btn-login {
+  font-family: 'Arimo', sans-serif;
+  @apply px-5 py-1.5 rounded-full text-base text-[#364153] hover:bg-gray-100 transition-colors;
+}
+
+.header-btn-signup {
+  font-family: 'Arimo', sans-serif;
+  @apply px-5 py-1.5 rounded-full text-base text-white bg-gradient-to-r from-[#A684FF] via-[#C27AFF] to-[#7C86FF] hover:opacity-90 transition-opacity;
+}

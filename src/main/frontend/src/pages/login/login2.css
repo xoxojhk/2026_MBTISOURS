@@ -1,0 +1,286 @@
+
+/* Container */
+.login-container {
+  @apply w-full max-w-md flex min-h-screen items-center justify-center;
+}
+
+@media (min-width: 1024px) {
+  .login-container {
+    @apply max-w-5xl;
+  }
+}
+
+/* Card */
+.login-card {
+  @apply bg-white/90 backdrop-blur-sm rounded-2xl shadow-2xl border border-violet-100 p-5 overflow-hidden;
+}
+
+@media (min-width: 640px) {
+  .login-card {
+    @apply rounded-3xl p-10;
+  }
+}
+
+@media (min-width: 1024px) {
+  .login-card {
+    @apply grid grid-cols-2 gap-8 p-0;
+  }
+}
+
+/* Left Side */
+.login-left-side {
+  @apply hidden;
+}
+
+@media (min-width: 1024px) {
+  .login-left-side {
+    @apply flex items-center justify-center bg-gradient-to-br from-violet-50 via-purple-50 to-indigo-50 p-12;
+  }
+}
+
+.login-image-container {
+  @apply relative w-full h-full flex items-center justify-center;
+}
+
+/* Right Side */
+.login-right-side {
+  @apply p-0;
+}
+
+@media (min-width: 1024px) {
+  .login-right-side {
+    @apply p-12 flex flex-col justify-center;
+  }
+}
+
+/* Header */
+.login-header {
+  @apply text-center mb-5;
+}
+
+@media (min-width: 640px) {
+  .login-header {
+    @apply mb-8;
+  }
+}
+
+.login-icon {
+  @apply inline-flex items-center justify-center w-14 h-14 bg-gradient-to-br from-violet-400 via-purple-400 to-indigo-400 rounded-full mb-3 shadow-lg;
+}
+
+@media (min-width: 640px) {
+  .login-icon {
+    @apply w-16 h-16 mb-4;
+  }
+}
+
+.login-emoji {
+  @apply text-2xl;
+}
+
+@media (min-width: 640px) {
+  .login-emoji {
+    @apply text-3xl;
+  }
+}
+
+.login-title {
+  @apply text-xl font-bold bg-gradient-to-r from-violet-600 to-purple-600 bg-clip-text text-transparent mb-1;
+}
+
+@media (min-width: 640px) {
+  .login-title {
+    @apply text-2xl mb-2;
+  }
+}
+
+.login-subtitle {
+  @apply text-sm text-gray-600;
+}
+
+@media (min-width: 640px) {
+  .login-subtitle {
+    @apply text-base;
+  }
+}
+
+/* Form */
+.login-form {
+  @apply space-y-3;
+}
+
+@media (min-width: 640px) {
+  .login-form {
+    @apply space-y-5;
+  }
+}
+
+/* Input Group */
+.login-input-label {
+  @apply block text-xs font-medium text-gray-700 mb-1.5;
+}
+
+@media (min-width: 640px) {
+  .login-input-label {
+    @apply text-sm mb-2;
+  }
+}
+
+.login-input-wrapper {
+  @apply relative;
+}
+
+.login-input-icon {
+  @apply absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none;
+}
+
+.login-input-icon svg {
+  @apply size-4 text-violet-400;
+}
+
+@media (min-width: 640px) {
+  .login-input-icon svg {
+    @apply size-5;
+  }
+}
+
+.login-input {
+  @apply block w-full pl-9 pr-3 py-2.5 text-sm border-2 border-violet-200 rounded-xl focus:ring-2 focus:ring-violet-400 focus:border-violet-400 transition-all outline-none bg-white/50;
+}
+
+@media (min-width: 640px) {
+  .login-input {
+    @apply pl-10 py-3 text-base rounded-2xl;
+  }
+}
+
+/* Remember Row */
+.login-remember-row {
+  @apply flex items-center justify-between text-xs;
+}
+
+@media (min-width: 640px) {
+  .login-remember-row {
+    @apply text-sm;
+  }
+}
+
+.login-remember-label {
+  @apply flex items-center cursor-pointer;
+}
+
+.login-remember-label input[type="checkbox"] {
+  @apply w-3.5 h-3.5 text-violet-600 border-violet-300 rounded focus:ring-violet-400;
+}
+
+@media (min-width: 640px) {
+  .login-remember-label input[type="checkbox"] {
+    @apply w-4 h-4;
+  }
+}
+
+.login-remember-label span {
+  @apply ml-1.5 text-gray-600 transition-colors;
+}
+
+.login-remember-label:hover span {
+  @apply text-violet-600;
+}
+
+@media (min-width: 640px) {
+  .login-remember-label span {
+    @apply ml-2;
+  }
+}
+
+.login-forgot-link {
+  @apply text-violet-600 hover:text-violet-700 font-medium;
+}
+
+/* Submit Button */
+.login-submit-btn {
+  @apply w-full py-2.5 px-4 text-sm bg-gradient-to-r from-violet-400 via-purple-400 to-indigo-400 text-white rounded-xl font-medium hover:shadow-xl hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-violet-400 transition-all disabled:opacity-50 disabled:cursor-not-allowed;
+}
+
+@media (min-width: 640px) {
+  .login-submit-btn {
+    @apply py-3 text-base rounded-2xl;
+  }
+}
+
+/* Divider */
+.login-divider {
+  @apply relative;
+}
+
+.login-divider-line {
+  @apply absolute inset-0 flex items-center;
+}
+
+.login-divider-line div {
+  @apply w-full border-t border-gray-300;
+}
+
+.login-divider-text {
+  @apply relative flex justify-center text-xs;
+}
+
+@media (min-width: 640px) {
+  .login-divider-text {
+    @apply text-sm;
+  }
+}
+
+.login-divider-text span {
+  @apply px-4 bg-white text-gray-500;
+}
+
+/* Social Buttons */
+.login-social-buttons {
+  @apply flex justify-center gap-3;
+}
+
+@media (min-width: 640px) {
+  .login-social-buttons {
+    @apply gap-4;
+  }
+}
+
+.login-social-btn {
+  @apply flex items-center justify-center w-12 h-12 bg-transparent border-2 border-gray-300 rounded-full hover:border-violet-400 hover:scale-110 transition-all;
+}
+
+@media (min-width: 640px) {
+  .login-social-btn {
+    @apply w-14 h-14;
+  }
+}
+
+.login-social-btn svg {
+  @apply w-5 h-5;
+}
+
+@media (min-width: 640px) {
+  .login-social-btn svg {
+    @apply w-6 h-6;
+  }
+}
+
+/* Signup Link */
+.login-signup-link {
+  @apply text-center;
+}
+
+.login-signup-link p {
+  @apply text-xs text-gray-600 mt-5;
+}
+
+@media (min-width: 640px) {
+  .login-signup-link p {
+    @apply text-sm mt-6;
+  }
+}
+
+.login-signup-link a {
+  @apply text-violet-600 hover:text-violet-700 font-medium;
+}
