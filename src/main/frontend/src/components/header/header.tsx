@@ -1,4 +1,5 @@
 import './Header.css';
+import { Link } from "react-router-dom";
 
 export default function Header() {
   return (
@@ -61,9 +62,9 @@ export default function Header() {
 
           {/* Navigation Buttons */}
           <div className="header-nav">
-            <button className="header-btn-login">
+            <Link to="/login" className="header-btn-login">
               로그인
-            </button>
+            </Link>
             <button className="header-btn-signup">
               가입
             </button>

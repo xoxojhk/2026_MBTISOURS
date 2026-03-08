@@ -17,6 +17,10 @@ public class MbtiResult {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id")
+    private User user;
+
     /** 검사일 */
     @Column(nullable = false)
     private LocalDate testDate;

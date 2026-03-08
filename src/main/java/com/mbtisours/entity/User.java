@@ -1,5 +1,7 @@
 package com.mbtisours.entity;
 
+import com.mbtisours.constant.BirthType;
+import com.mbtisours.constant.Gender;
 import jakarta.persistence.*;
 import lombok.*;
 import java.time.LocalDate;
@@ -33,11 +35,11 @@ public class User {
 
     @Enumerated(EnumType.STRING)
     @Column(name = "birth_type", length = 10)
-    private String birthType; // SOLAR 양력 / LUNAR 음력
+    private BirthType birthType; // SOLAR 양력 / LUNAR 음력
 
     @Enumerated(EnumType.STRING)
     @Column(length = 10)
-    private String gender;
+    private Gender gender;
 
     @Column(nullable = false, length = 50)
     private String nickname;

@@ -38,3 +38,6 @@ out/
 
 # Frontend build output (Vite / React)
 src/main/resources/static/**
+
+# 로컬 설정 제외
+application-local.properties

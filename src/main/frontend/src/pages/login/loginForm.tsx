@@ -1,23 +1,35 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router';
 import { Mail, Lock } from 'lucide-react';
+import { login } from "../../services/auth.service";
+import { useAuth } from "../../providers/authProvider";
 
 function LoginForm() {
   const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+  const { login } = useAuth();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
-
-    // Mock login - replace with actual API call
-    setTimeout(() => {
-      console.log('Login attempted with:', { email, password });
+try {
+      const result = await login(email, password);
+      //authLogin(result.token);
+      console.log("login result:", result);
+      alert("로그인 성공");
+      navigate("/");
+    } catch (error) {
+      if (!result.success) {
+          alert(result.message);
+          return;
+        }
+      alert("로그인 실패");
+    } finally {
       setIsLoading(false);
-      // navigate('/dashboard');
-    }, 1000);
+    }
+
   };
 
   return (

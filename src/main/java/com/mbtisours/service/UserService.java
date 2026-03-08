@@ -4,11 +4,14 @@ import com.mbtisours.dto.LoginResponse;
 import com.mbtisours.dto.SignUpRequest;
 import com.mbtisours.entity.User;
 import com.mbtisours.repository.UserRepository;
+import jdk.jfr.Frequency;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+@Slf4j
 @Service
 @RequiredArgsConstructor
 @Transactional(readOnly = true)
@@ -41,15 +44,21 @@ public class UserService {
     }
 
     public LoginResponse login(String email, String rawPassword) {
-
+        log.info("입력 Email : " + email);
+        log.info("입력 Pw : " + rawPassword);
         // 1️⃣ 이메일로 사용자 조회
         User user = userRepository.findByEmail(email)
-                .orElseThrow(() ->
-                        new IllegalArgumentException("존재하지 않는 사용자입니다.")
-                );
+                                .orElseThrow(() ->
+                                        new IllegalArgumentException("존재하지 않는 사용자입니다.")
+                                );
 
         // 2️⃣ 비밀번호 검증
-        if (!passwordEncoder.matches(rawPassword, user.getPassword())) {
+//        if (!passwordEncoder.matches(rawPassword, user.getPassword())) {
+//            throw new IllegalArgumentException("비밀번호가 일치하지 않습니다.");
+//        }
+        // 임시 인증
+        if(rawPassword.equals(user.getPassword())) {
+            log.info("입력 비밀번호 : " + rawPassword);
             throw new IllegalArgumentException("비밀번호가 일치하지 않습니다.");
         }
 
