@@ -57,7 +57,7 @@ public class UserService {
 //            throw new IllegalArgumentException("비밀번호가 일치하지 않습니다.");
 //        }
         // 임시 인증
-        if(rawPassword.equals(user.getPassword())) {
+        if(!rawPassword.equals(user.getPassword())) {
             log.info("입력 비밀번호 : " + rawPassword);
             throw new IllegalArgumentException("비밀번호가 일치하지 않습니다.");
         }
