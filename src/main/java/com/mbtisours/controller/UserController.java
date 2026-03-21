@@ -25,4 +25,18 @@ public class UserController {
 
         return ResponseEntity.ok(response);
     }
+
+    // 회원가입 API 추가
+    @PostMapping("/signup")
+    public ResponseEntity<String> signup(
+            @RequestBody SignUpRequest request
+    ) {
+        // 개발 단계에서만 확인하고 나중에 삭제
+        log.info("회원가입 요청 - 이메일: {}, 이름: {}", request.getEmail(), request.getName());
+
+        // userService에서 회원가입 로직 처리
+        userService.signup(request);
+
+        return ResponseEntity.ok("회원가입이 완료되었습니다.");
+    }
 }

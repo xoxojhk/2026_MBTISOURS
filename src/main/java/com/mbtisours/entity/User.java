@@ -41,7 +41,7 @@ public class User {
     @Column(length = 10)
     private Gender gender;
 
-    @Column(nullable = false, length = 50)
+    @Column(length = 50)
     private String nickname;
 
     @Column(length = 10)
