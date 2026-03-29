@@ -14,7 +14,7 @@ import org.springframework.transaction.annotation.Transactional;
 @Slf4j
 @Service
 @RequiredArgsConstructor
-@Transactional(readOnly = true)
+@Transactional(readOnly = false)
 public class UserService {
 
     private final UserRepository userRepository;
@@ -36,7 +36,7 @@ public class UserService {
                 .email(dto.getEmail())
                 .password(encodedPassword)
                 .name(dto.getName())
-                .nickname(dto.getNickname())
+                //.nickname(dto.getNickname())
                 .build();
 
         // 4️⃣ 저장
@@ -53,14 +53,15 @@ public class UserService {
                                 );
 
         // 2️⃣ 비밀번호 검증
-//        if (!passwordEncoder.matches(rawPassword, user.getPassword())) {
-//            throw new IllegalArgumentException("비밀번호가 일치하지 않습니다.");
-//        }
-        // 임시 인증
-        if(!rawPassword.equals(user.getPassword())) {
-            log.info("입력 비밀번호 : " + rawPassword);
+        if (!passwordEncoder.matches(rawPassword, user.getPassword())) {
             throw new IllegalArgumentException("비밀번호가 일치하지 않습니다.");
         }
+
+        // 임시 인증
+//        if(!rawPassword.equals(user.getPassword())) {
+//            log.info("입력 비밀번호 : " + rawPassword);
+//            throw new IllegalArgumentException("비밀번호가 일치하지 않습니다.");
+//        }
 
         // 3️⃣ 로그인 성공 → 응답 DTO 반환
         return new LoginResponse(
