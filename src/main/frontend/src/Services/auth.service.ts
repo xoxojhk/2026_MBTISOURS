@@ -13,3 +13,15 @@ export const login = async (email: string, password: string) => {
 export const logout = () => {
   localStorage.removeItem("token");
 };
+
+// 회원가입 함수 추가
+export const signup = async (name: string, email: string, password: string) => {
+  console.log('사인업옸음')
+  console.log(name + email + password)
+  const response = await api.post("/auth/signup", {
+    name,
+    email,
+    password,
+  });
+  return response.data;
+};

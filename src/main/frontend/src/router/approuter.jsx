@@ -4,6 +4,7 @@ import Login2 from "../pages/login/loginPage";
 import Header from "../components/header/header";
 import Footer from "../components/footer/footer";
 import Main from "../pages/main/main";
+import Signup from "../pages/signup/signup";
 
 function AppRouter() {
   return (
@@ -12,10 +13,11 @@ function AppRouter() {
 
       {/* 페이지별로 바뀌는 영역 */}
       <main className="flex-1 flex overflow-y-auto">
-          <Routes>
-            <Route path="/" element={<Main />} />
-            <Route path="/login" element={<Login2 />} />
-          </Routes>
+        <Routes>
+          <Route path="/" element={<Main />} />
+          <Route path="/login" element={<Login2 />} />
+          <Route path="/signup" element={<Signup />} />
+        </Routes>
       </main>
 
       {/* Footer 필요하면 여기 */}

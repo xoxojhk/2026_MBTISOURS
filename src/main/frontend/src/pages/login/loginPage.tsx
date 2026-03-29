@@ -1,5 +1,5 @@
 import { MBTICharacters } from '../../utils/MBTICharacters';
-import LoginForm from './LoginForm';
+import LoginForm from './loginForm';
 import './login2.css';
 
 function LoginPage() {

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router';
 import { Mail, Lock } from 'lucide-react';
-import { login } from "../../services/auth.service";
+import { login } from "../../Services/auth.service";
 //import { useAuth } from "../../providers/authProvider";
 
 function LoginForm() {
